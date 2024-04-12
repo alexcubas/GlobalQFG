@@ -22,7 +22,7 @@ export default function RootLayout({
           className="h-screen bg-cover bg-center w-full justify-center"
           style={{ backgroundImage: 'url("/Imagens/BackgroundImage.png")' }}
         >
-          {/* <Header /> */}
+          <Header />
           {children}
         </div>
       </body>

@@ -14,53 +14,35 @@ export default function Home() {
   const [teste, setteste] = useState("teste");
 
   return (
-    <div className="justify-center flex">
-      {/* <div className="pt-10 flex justify-center items-center">
-        <img
-          src="/Imagens/imagemBanner1.png"
-          className="h-auto w-[1280px]"
-          alt="Imagem Overlay"
-        />
-      </div> */}
-
+    <div className="justify-center flex max-w-full h-screen items-center overflow-hidden">
       <Carousel
         opts={{
           align: "start",
           loop: true,
         }}
-        className="w-[1280px]"
+        className="w-full md:w-[1280px] h-[90vh] relative rounded-3xl"
+        style={{
+          backgroundImage: "url('/Imagens/imagemBanner1.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
-        <CarouselContent>
-          <CarouselItem>
-            <div className="pt-10 flex justify-center items-center">h1</div>
-          </CarouselItem>
-          <CarouselItem>
-            <div className="pt-10 flex h-5/6 justify-center items-center">
-              h2
+        <CarouselContent className="flex flex-nowrap ">
+          <CarouselItem className="w-full flex justify-center items-center text-white h-full">
+            <div className="p-10 text-center justify-center align-bottom">
+              <h2>Título do Slide 1</h2>
+              <p>Descrição do que pode ser o slide 1.</p>
             </div>
           </CarouselItem>
-
-          {/* <CarouselItem>
-            <div className="pt-10 flex justify-center items-center">
-              <img
-                src="/Imagens/imagemBanner1.png"
-                alt="Imagem Banner 1"
-                className="md:basis-1/3 lg:basis-1/4"
-              />
+          <CarouselItem className="w-full flex justify-center items-center text-white">
+            <div className="p-10 text-center">
+              {/* <h2>Título do Slide 2</h2>
+              <p>Descrição do que pode ser o slide 2.</p> */}
             </div>
           </CarouselItem>
-          <CarouselItem>
-            <div className="pt-10 flex justify-center items-center">
-              <img
-                src="/Imagens/imagemBanner1.png"
-                alt="Imagem Banner 1"
-                className="md:basis-1/3 lg:basis-1/4"
-              />
-            </div>
-          </CarouselItem> */}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="absolute left-2 z-20 cursor-pointer" />
+        <CarouselNext className="absolute right-2 z-20 cursor-pointer" />
       </Carousel>
     </div>
   );
