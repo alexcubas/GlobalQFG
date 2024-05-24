@@ -13,16 +13,15 @@ export default function IconHeader() {
       {versionMob ? (
         <Image
           w={"30px"}
-          src={"/Icons/TL_LogoIcon.png"}
+          src={"/QFGIcons/GlobalLogo.png"}
           alignSelf={"center"}
           alt={"TudoLimpoIcone"}
         />
       ) : (
         <Image
-          w={"120px"}
-          src={"/Icons/TL_LogoFull.png"}
+          w={"60px"}
+          src={"/QFGIcons/GlobalLogo.png"}
           alignSelf={"center"}
-          mx={"-4px"}
           alt={"TudoLimpoIcone"}
         />
       )}

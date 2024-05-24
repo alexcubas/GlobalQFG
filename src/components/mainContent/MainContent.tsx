@@ -37,29 +37,15 @@ export default function MainContent({ scrollTo }: MainContentType) {
             alignItems="center" // Alinha itens no centro verticalmente
             justify={"center"}
             gap={"30px"}
-            w={"1280px"}
+            minW={"1280px"}
             h={"90%"}
             backgroundImage="url('/QFGImg/imagemBanner.png')"
             backgroundRepeat="no-repeat"
           >
             <Flex fontSize={"55px"} direction={"column"} textAlign={"center"}>
-              <Text>As Melhores Soluções</Text>
-              <Text>
-                em <span style={{ color: "#DF4076" }}>Limpeza</span> e
-                <span style={{ color: "#BE2A5C" }}> Conservação</span>
-              </Text>
+              <Text>CONHEÇA A QFG</Text>
             </Flex>
             <Flex gap={"30px"} textAlign={"center"}>
-              <Link to="nossosServicos" smooth={false} duration={200}>
-                <ButtonGradient
-                  text={"Nossos serviços"}
-                  width="350px"
-                  noBorder
-                  borderType="Left"
-                  backGround="#BE2A5C"
-                  textSize="32px"
-                />
-              </Link>
               <LinkChakra
                 href={whatsappUrl}
                 isExternal
@@ -67,11 +53,11 @@ export default function MainContent({ scrollTo }: MainContentType) {
                 _hover={{ textDecoration: "none" }}
               >
                 <ButtonGradientWhithImage
-                  text={"Fale conosco"}
+                  text={"SAIBA MAIS"}
                   width="350px"
                   borderType="Left"
                   backGround="#BE2A5C"
-                  textSize="32px"
+                  textSize="23px"
                 />
               </LinkChakra>
             </Flex>

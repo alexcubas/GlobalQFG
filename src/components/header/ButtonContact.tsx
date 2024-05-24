@@ -1,4 +1,3 @@
-import phoneLogic from "@/helpers/phoneLogic";
 import { Flex, Image, Link, useBreakpointValue } from "@chakra-ui/react";
 
 export default function ButtonContact() {
@@ -17,17 +16,25 @@ export default function ButtonContact() {
     <Flex gap={"20px"}>
       <Link href={instagramUrl} isExternal>
         <Image
-          src="/Icons/InstaLogo.png"
+          src="/QFGIcons/instagramLogo.png"
           alt="InstaLogo"
-          w={isWideVersion ? "36px" : "40px"}
-          h={isWideVersion ? "36px" : "40px"}
+          w={isWideVersion ? "36px" : "35px"}
+          h={isWideVersion ? "36px" : "35px"}
           cursor={"pointer"}
         />
       </Link>
       <Link href={whatsappUrl} isExternal>
         <Image
-          mt={"2px"}
-          src="/Icons/WhatsLogo.png"
+          src="/QFGIcons/faceLogo.png"
+          alt="WhatsLogo"
+          w={isWideVersion ? "30px" : "35px"}
+          h={isWideVersion ? "30px" : "35px"}
+          cursor={"pointer"}
+        />
+      </Link>
+      <Link href={whatsappUrl} isExternal>
+        <Image
+          src="/QFGIcons/youtubeLogo.png"
           alt="WhatsLogo"
           w={isWideVersion ? "30px" : "35px"}
           h={isWideVersion ? "30px" : "35px"}

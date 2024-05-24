@@ -19,28 +19,24 @@ export default function ButtonGradientWhithImage({
   return (
     <Button
       variant="ghost" // Usa o estilo ghost para manter a transparência
-      w={"340px"}
-      h={"92px"}
+      w={"220px"}
+      h={"66px"}
       borderColor="transparent" // Define a cor da borda como transparente
       position="relative"
-      _hover={{ opacity: "70%" }} // Ajusta a opacidade e a cor da borda no hover
+      _hover={{ width: "250px", height: "75px", fontSize: "25px" }} // Ajusta a opacidade e a cor da borda no hover
       _focus={{ borderColor: "transparent" }} // Remove a borda ao focar
-      _active={{ borderColor: "transparent", opacity: "100%" }} // Remove a borda ao clicar
+      _active={{ width: "220px", height: "66px", fontSize: "23px" }} // Remove a borda ao clicar
       sx={{
-        backgroundImage: `url('/Icons/borderButton.png')`, // Define a imagem de fundo
+        backgroundImage: `url('/QFGIcons/borderButton.png')`, // Define a imagem de fundo
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
+        transition: "all 0.3s ease", // Adiciona a transição para todas as propriedades
       }}
-      fontWeight="extrabold"
+      fontWeight="Regular"
       fontSize={textSize ? textSize : "25px"}
     >
-      <Text
-        bgGradient="linear(to-r, #CBA558, #E9CF86, #ECD38D, #E9CF86, #CBA558)"
-        bgClip="text"
-      >
-        {text}
-      </Text>
+      <Text color={"white"}>{text}</Text>
     </Button>
   );
 }

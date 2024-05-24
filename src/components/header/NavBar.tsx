@@ -47,7 +47,7 @@ export default function NavBar({ scrollTo, onclose }: NavBarType) {
         className="link"
       >
         <Text cursor={"pointer"} fontWeight={"regular"}>
-          Home
+          Sobre nós
         </Text>
       </Link>
       <Link
@@ -58,7 +58,7 @@ export default function NavBar({ scrollTo, onclose }: NavBarType) {
         duration={200}
         className="link"
       >
-        <Text cursor={"pointer"}>Serviços</Text>
+        <Text cursor={"pointer"}>Eventos</Text>
       </Link>
       <Link
         spy={true}
@@ -68,7 +68,17 @@ export default function NavBar({ scrollTo, onclose }: NavBarType) {
         duration={200}
         className="link"
       >
-        <Text cursor={"pointer"}>Quem somos</Text>
+        <Text cursor={"pointer"}>Palavra</Text>
+      </Link>
+      <Link
+        spy={true}
+        activeClass="active"
+        to="Contato"
+        smooth={false}
+        duration={200}
+        className="link"
+      >
+        <Text cursor={"pointer"}>Contribua</Text>
       </Link>
       <Link
         spy={true}

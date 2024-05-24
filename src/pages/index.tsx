@@ -39,7 +39,7 @@ export default function Home() {
       </Head>
       <Flex
         align={"center"}
-        bg={"#BE2A5C"}
+        bg={"#35275D"}
         direction={"column"}
         minHeight="100vh"
       >
@@ -80,7 +80,7 @@ export default function Home() {
             )}
           </Flex>
         </Flex>
-        <Flex w={"60%"} className={"Conhecer"}>
+        <Flex w={"100%"} className={"Conhecer"}>
           <BlockNossosServicos />
         </Flex>
         <Flex w={"100%"} justify={"center"} className={"Quem somos?"}>

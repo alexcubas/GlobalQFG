@@ -1,19 +1,15 @@
 import {
-  Button,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
   DrawerContent,
   DrawerFooter,
-  DrawerHeader,
   DrawerOverlay,
   Flex,
   Image,
-  Input,
   useBreakpointValue,
   useDisclosure,
 } from "@chakra-ui/react";
-import { motion, useAnimation } from "framer-motion";
 import { MutableRefObject, useEffect, useRef, useState } from "react";
 import ButtonContact from "./ButtonContact";
 import IconHeader from "./IconHeader";
@@ -54,12 +50,16 @@ export default function HeaderComponent({ scrollTo }: HeaderComponentType) {
   }, []);
   return (
     <Flex
-      position={isSticky ? "fixed" : "absolute"}
+      position="absolute"
       top={isSticky ? "0" : "auto"}
+      left="50%"
+      transform="translateX(-50%)"
       background={isSticky ? "rgba(0, 0, 0, 0.5)" : "none"}
       h={isWideVersion ? "60px" : "150px"}
       w={"100%"}
+      maxW={"1280px"}
       align={"end"}
+      pb={"10px"}
       justify={isWideVersion ? "space-around" : "space-evenly"}
       zIndex={2}
       borderBottom={"1px solid white"}
@@ -96,7 +96,7 @@ export default function HeaderComponent({ scrollTo }: HeaderComponentType) {
           </DrawerContent>
         </Drawer>
       </Flex>
-      <Flex mb={isWideVersion ? "10px" : "0px"} w={"33%"} justify={"center"}>
+      <Flex mb={isWideVersion ? "10px" : "0px"} w={"20%"} justify={"center"}>
         <IconHeader />
       </Flex>
       <Flex
@@ -108,7 +108,7 @@ export default function HeaderComponent({ scrollTo }: HeaderComponentType) {
       >
         <NavBar scrollTo={scrollTo} />
       </Flex>
-      <Flex w={"33%"} justify={"center"}>
+      <Flex w={"20%"} justify={"center"}>
         <ButtonContact />
       </Flex>
     </Flex>
