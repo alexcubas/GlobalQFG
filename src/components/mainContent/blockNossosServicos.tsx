@@ -9,6 +9,7 @@ import BlockMainContent from "../patterns/BlockMainContent";
 import BlockQualificationsContent from "../patterns/BlockQualificationsContent";
 import ButtonGradient from "../patterns/ButtonGradient";
 import TextWithGradient from "../patterns/textWithGradient";
+import ImageCarousel from "../QFGComponents/QFGCarroussel";
 
 export default function BlockNossosServicos() {
   const isWideVersion = useBreakpointValue({
@@ -27,6 +28,8 @@ export default function BlockNossosServicos() {
       id="nossosServicos"
       gap={isWideVersion ? "50px" : "50px"}
       mt={isWideVersion ? "50px" : "80px"}
-    ></Flex>
+    >
+      <ImageCarousel />
+    </Flex>
   );
 }
