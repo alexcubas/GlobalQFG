@@ -1,96 +1,77 @@
-// components/ImageCarousel.tsx
-import { useEffect, useState } from "react";
-import { Box, IconButton } from "@chakra-ui/react";
-import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import React from "react";
+import Slider from "react-slick";
+import { Box } from "@chakra-ui/react";
 import Image from "next/image";
+
+// Importando os estilos CSS do Slick Carousel
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const images = [
   "/QFGImg/primeiroCarousel3.png",
   "/QFGImg/primeiroCarousel2.png",
   "/QFGImg/primeiroCarousel1.png",
-  // adicione mais imagens conforme necessário
+  "/QFGImg/primeiroCarousel3.png",
+  "/QFGImg/primeiroCarousel2.png",
+  "/QFGImg/primeiroCarousel1.png",
+  // Adicione mais imagens conforme necessário
 ];
 
-const responsive = {
-  superLargeDesktop: {
-    breakpoint: { max: 4000, min: 1024 },
-    items: 3,
-  },
-  desktop: {
-    breakpoint: { max: 1024, min: 768 },
-    items: 3,
-  },
-  tablet: {
-    breakpoint: { max: 768, min: 464 },
-    items: 2,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-  },
-};
-
-const CustomButtonGroup: React.FC<any> = ({ next, previous }) => {
-  return (
-    <Box
-      position="absolute"
-      width="100%"
-      top="50%"
-      transform="translateY(-50%)"
-      display="flex"
-      justifyContent="space-between"
-      px={4}
-    >
-      <IconButton
-        icon={<ChevronLeftIcon />}
-        onClick={previous}
-        aria-label="Previous"
-        zIndex="1"
-      />
-      <IconButton
-        icon={<ChevronRightIcon />}
-        onClick={next}
-        aria-label="Next"
-        zIndex="1"
-      />
-    </Box>
-  );
-};
-
-const ImageCarousel: React.FC = () => {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  if (!isClient) {
-    return null;
-  }
+const ImageCarousel = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3, // Padrão para desktop grande
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1920, // Tela de largura até 1920px
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 1024, // Tela de largura até 1024px
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600, // Tela de largura até 600px
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+    ],
+  };
 
   return (
-    <Box position="relative" maxW="100%" height="500px">
-      <Carousel
-        responsive={responsive}
-        infinite={true}
-        arrows={false}
-        renderButtonGroupOutside={true}
-        customButtonGroup={<CustomButtonGroup />}
-      >
+    <Box width="full" overflow="hidden" p={5}>
+      <Slider {...settings}>
         {images.map((src, index) => (
-          <Box key={index} p={1}>
+          <Box key={index} p={1} height="500px" position="relative">
             <Image
               src={src}
-              alt={`Image ${index + 1}`}
+              alt={`Slide ${index + 1}`}
               layout="fill"
               objectFit="cover"
-              style={{ borderRadius: "md", boxShadow: "md" }}
             />
           </Box>
         ))}
-      </Carousel>
+      </Slider>
     </Box>
   );
 };
