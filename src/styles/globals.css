@@ -8,6 +8,10 @@ body {
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
+.css-1punn9a {
+  padding: 0px !important;
+}
+
 .link {
   color: #ffffff; /* cor padrão para links inativos */
 }

@@ -1,0 +1,14 @@
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide {
+  transition: transform 0.5s ease-in-out;
+}
+
+.zoom {
+  transform: scale(1.2); /* Aumenta o zoom da imagem central */
+  z-index: 1; /* Traz a imagem central para frente */
+}

@@ -1,14 +1,4 @@
-import {
-  Flex,
-  useBreakpointValue,
-  Text,
-  Button,
-  Image,
-} from "@chakra-ui/react";
-import BlockMainContent from "../patterns/BlockMainContent";
-import BlockQualificationsContent from "../patterns/BlockQualificationsContent";
-import ButtonGradient from "../patterns/ButtonGradient";
-import TextWithGradient from "../patterns/textWithGradient";
+import { Flex, useBreakpointValue } from "@chakra-ui/react";
 import ImageCarousel from "../QFGComponents/QFGCarroussel";
 
 export default function BlockNossosServicos() {
@@ -27,7 +17,7 @@ export default function BlockNossosServicos() {
       align={"center"}
       id="nossosServicos"
       gap={isWideVersion ? "50px" : "50px"}
-      mt={isWideVersion ? "50px" : "80px"}
+      // mt={isWideVersion ? "50px" : "80px"}
     >
       <ImageCarousel />
     </Flex>
