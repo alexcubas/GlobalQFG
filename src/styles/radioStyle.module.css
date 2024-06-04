@@ -1,0 +1,37 @@
+/* RadioPlayer.module.css */
+.audioPlayer {
+  width: 100%;
+  background-color: transparent; /* Fundo transparente */
+  border: none; /* Remover borda padrão */
+  outline: none; /* Remover outline padrão */
+  -webkit-appearance: none; /* Remover aparência padrão no Chrome e Safari */
+  appearance: none; /* Remover aparência padrão nos navegadores suportados */
+}
+
+.audioPlayer::-webkit-media-controls-panel {
+  background-color: transparent; /* Fundo do painel de controle transparente */
+}
+
+.audioPlayer::-webkit-media-controls-enclosure {
+  background: transparent; /* Fundo transparente do contorno */
+}
+
+.audioPlayer::-webkit-media-controls-play-button,
+.audioPlayer::-webkit-media-controls-mute-button,
+.audioPlayer::-webkit-media-controls-volume-slider,
+.audioPlayer::-webkit-media-controls-volume-control-container,
+.audioPlayer::-webkit-media-controls-current-time-display,
+.audioPlayer::-webkit-media-controls-time-remaining-display,
+.audioPlayer::-webkit-media-controls-timeline {
+  filter: invert(1) brightness(10); /* Inverter e clarear cores para deixar os botões brancos */
+  background-color: transparent; /* Fundo transparente para os controles */
+  color: white; /* Cor do texto */
+}
+
+.audioPlayer::-webkit-media-controls-volume-control-container {
+  filter: invert(1) brightness(10); /* Certificar que o controle de volume fique branco */
+}
+
+.audioPlayer::-webkit-media-controls-mute-button {
+  filter: invert(1) brightness(10); /* Certificar que o botão de mute fique branco */
+}

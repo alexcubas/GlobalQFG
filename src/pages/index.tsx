@@ -2,6 +2,7 @@ import AboutContainer from "@/components/about/AboutContainer";
 import AboutCompanyContainer from "@/components/aboutCompany/AboutCompanyContainer";
 import AboutCompanyContainerMobile from "@/components/aboutCompany/AboutCompanyContainerMob";
 import FaleConoscoBlock from "@/components/faleConosco/faleConoscoBlock";
+import FaleConoscoBlockCopy from "@/components/faleConosco/faleConoscoBlock copy";
 import FooterContainer from "@/components/footer/FooterContainer";
 import FooterContainerMobile from "@/components/footer/FooterContainerMob";
 import HeaderComponent from "@/components/header/HeaderComponent";
@@ -88,6 +89,9 @@ export default function Home() {
         </Flex>
         <Flex w={"100%"} justify={"center"} className={"Fale conosco"}>
           <FaleConoscoBlock />
+        </Flex>
+        <Flex w={"100%"} justify={"center"} className={"Fale conosco"}>
+          <FaleConoscoBlockCopy />
         </Flex>
         <Flex w={"100%"} className={"Contate-nos"}>
           {isWideVersion ? <FooterContainerMobile /> : <FooterContainer />}

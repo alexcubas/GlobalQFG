@@ -1,15 +1,15 @@
 import {
   Flex,
-  Text,
-  Image,
   useBreakpointValue,
-  Button,
+  Grid,
+  GridItem,
+  Image,
+  Text,
 } from "@chakra-ui/react";
-import ButtonGradient from "../patterns/ButtonGradient";
 import TextWithGradient from "../patterns/textWithGradient";
-import ImageCarouselSecond from "../QFGComponents/QFGSecondCarroussel";
+import RadioPlayer from "../QFGComponents/RadioPlayer";
 
-export default function AboutCompanyContainer() {
+export default function FaleConoscoBlock() {
   const isWideVersion = useBreakpointValue({
     base: true,
     sm: true,
@@ -17,20 +17,23 @@ export default function AboutCompanyContainer() {
     lg: false,
     xlg: false,
   });
+
   return (
     <Flex
+      id="Contato"
       direction={"column"}
-      id="quemSomos"
-      align={"center"}
       textColor={"white"}
-      w={"95%"}
-      mt={"50px"}
+      align={"center"}
+      w={"70%"}
     >
       <Flex gap="15px" fontSize={isWideVersion ? "25px" : "55px"}>
-        <TextWithGradient text="NOSSOS" fontWeight={"bold"} />
-        <TextWithGradient text="CULTOS E EVENTOS" />
+        <TextWithGradient text="RÁDIO" fontWeight={"bold"} />
       </Flex>
-      <ImageCarouselSecond />
+      <Flex>
+        <Text>Sábado às 15h</Text>
+      </Flex>
+
+      <RadioPlayer />
     </Flex>
   );
 }
